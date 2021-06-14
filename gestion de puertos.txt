@@ -1,0 +1,6 @@
+netstat -aon
+taskkill /F /PID nro_pid
+
+taskkill /F /PID  8784
+taskkill /F /PID 8888
+taskkill /F /PID 8762
