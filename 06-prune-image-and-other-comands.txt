@@ -1,0 +1,31 @@
+docker-compose up -d --force-recreate
+
+docker container ls (ver la configuracion de contenedores y las IPs respectivas)
+docker stop CONTAINER_ID
+docker-compose start
+
+The docker image prune command allows you to clean up unused images. By default, docker image prune only cleans up dangling images.
+docker image prune
+
+To remove all images which are not used by existing containers, use the -a flag:
+docker image prune -a
+
+
+When you stop a container, it is not automatically removed unless you started it with the --rm flag. To see all containers on the Docker host, including stopped containers, use docker ps -a.
+You may be surprised how many containers exist, especially on a development system! A stopped container’s writable layers still take up disk space. To clean this up, you can use the docker container prune command.
+
+docker container prune
+
+Volumes can be used by one or more containers, and take up space on the Docker host. Volumes are never removed automatically, because to do so could destroy data.
+docker volume prune
+
+ocker networks don’t take up much disk space, but they do create iptables rules, bridge network devices, and routing table entries. To clean these things up, you can use docker network prune
+
+docker network prune
+
+Prune everything
+docker system prune
+
+
+https://docs.docker.com/config/pruning/
+https://www.vidaxp.com/tecnologia/como-borrar-imagenes-contenedores-y-volumenes-docker/
