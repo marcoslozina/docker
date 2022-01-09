@@ -1,0 +1,2 @@
+mvn clean package (para generar el .jar)
+docker-compose up --build (para construir el contenedor con el jar nuevo)
